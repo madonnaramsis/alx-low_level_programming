@@ -1,7 +1,7 @@
 #include<stdio.h>
 #include<stdlib.h>
 /**
- * main - print nums from 0 to 9 & char from a to z using putchar with ASCII code.
+ * main - print nums from 0 to 9 & char from a to z using putchar.
  *
  * Return: Always 0 (Success)
  */
