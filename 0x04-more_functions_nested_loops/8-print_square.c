@@ -1,21 +1,32 @@
-#include"main.h"
-
+#include "main.h"
 /**
- * print_square - print a square using the character #
+ * print_square - draws a diagonal line in the terminal.
+ * @size: length of the lines.
  *
- * @size: is the size of the square
- *
- * Return: Always 0 (Success)
-*/
-
+ * Return: void.
+ */
 void print_square(int size)
 {
-	int row, column;
+	int a, b;
 
-	for (row = 1; row <= size; ++row)
+	size++;
+	a = 1;
+	if (size > a)
 	{
-		for (column = 1; column <= size; ++column)
-			_putchar('#');
+		while (a < size)
+		{
+			b = 1;
+			while (b < size)
+			{
+				_putchar('#');
+				b++;
+			}
+			_putchar('\n');
+			a++;
+		}
+	}
+	else
+	{
 		_putchar('\n');
 	}
 }
