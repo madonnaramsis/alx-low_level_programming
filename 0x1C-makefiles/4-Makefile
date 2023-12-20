@@ -1,0 +1,25 @@
+CC = gcc
+SRC = main.c school.c
+OBJ = $(patsubst %.c, %.o, $(SRC))
+NAME = school
+RM = rm
+CFLAGS = -Wall -Werror -Wextra -pedantic
+
+all: $(OBJ)
+	$(CC) $(OBJ) -o $(NAME)
+
+clean: FORCE
+	$(RM) -f *~ $(NAME)
+
+oclean: FORCE
+	$(RM) -f $(OBJ)
+
+fclean: FORCE clean oclean
+	
+
+re: FORCE oclean all
+
+%.o: %.c
+	$(CC) $(CFLAGS) -c $< -o $@
+
+FORCE:
